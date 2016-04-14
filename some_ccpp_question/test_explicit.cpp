@@ -28,7 +28,7 @@ private:
 };
 int main()
 {
-	T t = 1.3f;//隐式调用不可取，不能通过编译
+	T t = 1.3f;//闅愬紡璋冪敤涓嶅彲鍙栵紝涓嶈兘閫氳繃缂栬瘧
 
 	printf("%d", t.m);
 	_getch();

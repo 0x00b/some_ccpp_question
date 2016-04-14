@@ -11,7 +11,7 @@ int isBigEndian()
 
 int main()
 {
-	printf("²Ù×÷ÏµÍ³ÊÇ:%s\n", isBigEndian() ? "´ó¶Ë" : "Ğ¡¶Ë");
+	printf("æ“ä½œç³»ç»Ÿæ˜¯:%s\n", isBigEndian() ? "å¤§ç«¯" : "å°ç«¯");
 
 #ifdef _WIN32
 	return system("pause");

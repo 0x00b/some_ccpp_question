@@ -18,7 +18,7 @@ typedef void(*func)(void);
 int main()
 {
 	int ret = sizeof(C);
-	printf("class CµÄ´óĞ¡£º%d\n",ret);
+	printf("class Cçš„å¤§å°ï¼š%d\n",ret);
 
 
 	printf(" %d %d  %d\n", sizeof(func), sizeof(int*), sizeof(C));

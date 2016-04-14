@@ -17,7 +17,7 @@ int main()
 	int n = 222;
 	int ret = count(n);
 
-	printf("%dµÄ¶þ½øÖÆÖÐÓÐ%d¸ö1\n", n, ret);
+	printf("%dçš„äºŒè¿›åˆ¶ä¸­æœ‰%dä¸ª1\n", n, ret);
 
 
 #ifdef _WIN32
