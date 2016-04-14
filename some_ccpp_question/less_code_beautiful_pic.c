@@ -12,12 +12,14 @@
 #define _sq(x) ((x)*(x)) // square
 #define _cb(x) abs((x)*(x)*(x)) // absolute value of cube
 #define _cr(x) (unsigned char)(pow((x),1.0/3.0)) // cube root
-unsigned char GR(int, int);
-unsigned char BL(int, int);
+unsigned char GR(int, int)
+{return 0;}
+unsigned char BL(int, int)
+{return 0;}
 unsigned char RD(int i, int j)
-{   // YOUR CODE HERE}unsigned char GR(int i,int j){   // YOUR CODE HERE}unsigned char BL(int i,int j){   // YOUR CODE HERE
-}
-void pixel_write(int, int); FILE *fp;
+{return 0;}
+void pixel_write(int, int); 
+FILE *fp;
 
 int main() { 
 	fp = fopen("MathPic.ppm", "wb"); 

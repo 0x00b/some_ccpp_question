@@ -3,7 +3,7 @@
 ** 或者，字符串中含有*和其他字符,重排数组，*在前，其他字符在后，并且相对顺序不变
 **
 *********************************************************************/
-
+#include <new>
 #include "main.h"
 
 #if _RESORT_ARRAY_
@@ -36,7 +36,7 @@ int ReSort(int a[], int n)
 	{
 		return nNeg;
 	}
-	int* pa = new int[nNeg] {0};// (int*)malloc(nNeg * sizeof(int));
+	int* pa = new int[nNeg] ;// (int*)malloc(nNeg * sizeof(int));
 	if (pa == NULL)
 	{
 		return 0;

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <conio.h>
 #include "main.h"
 
 #if _TEST_EXPLICIT_
@@ -31,7 +30,6 @@ int main()
 	T t = 1.3f;//隐式调用不可取，不能通过编译
 
 	printf("%d", t.m);
-	_getch();
 	try
 	{
 		f2();
