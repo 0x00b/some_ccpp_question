@@ -1,6 +1,6 @@
-// NOTE: compile with g++ filename.cpp -std=c++11
+﻿// NOTE: compile with g++ filename.cpp -std=c++11
 #include <iostream>
-#include <cmath>
+#include <math.h>
 #include <cstdlib>
 
 #include "main.h"
@@ -22,7 +22,11 @@ void pixel_write(int, int);
 FILE *fp;
 
 int main() { 
-	fp = fopen("MathPic.ppm", "wb"); 
+#if defined(_WIN32)||defined(_WIN64)
+	int err = fopen_s(&fp, "MathPic.ppm","wb"); 
+#else
+	fp = fopen("MathPic.ppm", "wb");
+#endif
 	fprintf(fp, "P6\n%d %d\n255\n", DIM, DIM); 
 	for (int j = 0; j < DIM; j++)     
 		for (int i = 0; i < DIM; i++)       

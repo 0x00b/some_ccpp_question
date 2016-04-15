@@ -15,10 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="binary_search.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="cycle_cross_link.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="find_continue_max.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="find_continue_num.cpp">
@@ -27,19 +35,10 @@
     <ClCompile Include="is_big_endian.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="less_code_beautiful_pic.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="resort_array.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="second_num.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="sum_num_binary_1.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test_explicit.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="test_sizeof.cpp">
@@ -48,10 +47,14 @@
     <ClCompile Include="test_strtok.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="main.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
+    <ClCompile Include="test_explicit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="less_code_beautiful_pic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="find_second_num.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
