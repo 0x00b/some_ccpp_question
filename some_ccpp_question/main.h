@@ -21,13 +21,13 @@
 #define _BINARY_SEARCH_			CLOSE
 #define _IS_BIG_ENDIAN_			CLOSE
 #define _FIND_CON_NUM_			CLOSE
-#define _LESS_CODE_BEAUT_PIC_	CLOSE
+#define _LESS_CODE_BEAUT_PIC_	OPEN
 #define _TEST_EXPLICIT_			CLOSE
 #define _TEST_STRTOK_			CLOSE
 #define _SUM_NUM_BIN_1_			CLOSE
 #define _SECOND_NUM_			CLOSE
 #define _TEST_SIZEOF_			CLOSE
-#define _FIND_SECOND_NUM_		OPEN
+#define _FIND_SECOND_NUM_		CLOSE
 
 
 #endif //_MAIN_H_
