@@ -14,12 +14,28 @@ public:
 private:
 
 };
+
+class Test
+{
+public:
+	int i;
+	union U
+	{
+		char buff[13];
+		int i;
+	};
+	void foo() {}
+	typedef char* (*f)(void*);
+	enum {r,b,g}color;
+};
 typedef void(*func)(void);
 int main()
 {
 	int ret = sizeof(C);
-	printf("class C的大小：%d\n",ret);
-
+	printf("size class C:%d\n", ret);
+	
+	ret = sizeof(Test);
+	printf("size class TEST:%d\n", ret);
 
 	printf(" %d %d  %d\n", sizeof(func), sizeof(int*), sizeof(C));
 	C* c = new C();
