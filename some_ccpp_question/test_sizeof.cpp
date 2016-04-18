@@ -15,7 +15,7 @@ private:
 
 };
 
-class Test
+class A
 {
 public:
 	int i;
@@ -23,7 +23,7 @@ public:
 	{
 		char buff[13];
 		int i;
-	};
+	}u;
 	void foo() {}
 	typedef char* (*f)(void*);
 	enum {r,b,g}color;
@@ -34,7 +34,7 @@ int main()
 	int ret = sizeof(C);
 	printf("size class C:%d\n", ret);
 	
-	ret = sizeof(Test);
+	ret = sizeof(A);
 	printf("size class TEST:%d\n", ret);
 
 	printf(" %d %d  %d\n", sizeof(func), sizeof(int*), sizeof(C));
