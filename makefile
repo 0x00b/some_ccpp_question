@@ -4,7 +4,6 @@ targ=$(shell ls some_ccpp_question|grep cpp|grep -v ccpp|xargs)
 objs=$(patsubst %.cpp,%,$(targ))
 
 all:$(objs)
-	echo $(targ)
 
 %:%.cpp
 	g++ -o $@ $< -lm -std=c++11

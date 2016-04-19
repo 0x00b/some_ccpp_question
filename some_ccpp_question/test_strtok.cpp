@@ -22,6 +22,17 @@ int main()
 		str = strtok(NULL,delms);
 #endif
 	}
+#if !defined(_WIN)
+	/* linux/unix ,strsep is better selection*/
+	char nstr[]="1sx|ff2|3|334|5";
+	char* pstr;
+	char* tstr = nstr;
+	while((pstr = strsep(&tstr, "|")) != NULL)
+	{
+		printf("%s\n", pstr);		
+	}
+
+#endif
 
 #if defined(_WIN)
 	return system("pause");
