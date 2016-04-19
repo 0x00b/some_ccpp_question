@@ -14,3 +14,6 @@ C or C++ ,some question.一些关于c，c++的问题。算法
 10、explicit</br>
 11、sizeof</br>
 12、 strtok</br>
+
+# 增加
+13、将一个数分解成几个连续的数，如 15 = 7 + 8 = 4 + 5 + 6 = 1 + 2 + 3+ 4 + 5
