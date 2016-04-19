@@ -1,4 +1,7 @@
-
+/*
+* 主要就是内存对齐的知识
+*
+*/
 #include "main.h"
 
 #if _TEST_SIZEOF_
@@ -52,7 +55,7 @@ int main()
 
 	f();
 
-#ifdef _WIN32
+#if defined(_WIN)
 	return system("pause");
 #else
 	return 0;

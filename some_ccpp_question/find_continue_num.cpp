@@ -42,7 +42,7 @@ int main()
 	Find(str, &p, &l);
 	printf("起始位置：%d ，一共有%d个\n", p, l);
 
-#ifdef _WIN32
+#if defined(_WIN)
 	return system("pause");
 #else
 	return 0;

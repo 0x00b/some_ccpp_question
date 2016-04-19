@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClCompile Include="binary_search.cpp" />
     <ClCompile Include="cycle_cross_link.cpp" />
+    <ClCompile Include="decompos_into_successive_num.cpp" />
     <ClCompile Include="find_continue_max.cpp" />
     <ClCompile Include="find_continue_num.cpp" />
     <ClCompile Include="find_second_num.cpp" />

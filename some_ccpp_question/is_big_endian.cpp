@@ -13,7 +13,7 @@ int main()
 {
 	printf("操作系统是:%s\n", isBigEndian() ? "大端" : "小端");
 
-#ifdef _WIN32
+#if defined(_WIN)
 	return system("pause");
 #else
 	return 0;

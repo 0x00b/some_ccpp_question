@@ -56,5 +56,8 @@
     <ClCompile Include="find_second_num.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="decompos_into_successive_num.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

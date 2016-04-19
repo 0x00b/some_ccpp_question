@@ -473,7 +473,7 @@ int main()
 	FreeLink(h);
 	FreeLink(h1);
 
-#ifdef _WIN32
+#if defined(_WIN)
 	return system("pause");
 #else
 	return 0;

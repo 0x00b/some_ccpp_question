@@ -8,7 +8,7 @@ int main()
 	char* str = NULL;
 	char delms[] = ";";
 
-#if defined(_WIN32) || defined(_WIN64) 
+#if defined(_WIN)
 	str = strtok_s(ss, delms, &result); 
 #else
 	str = strtok(ss,delms);
@@ -16,14 +16,14 @@ int main()
 	while (NULL != str && 0 != str[0])
  	{
 		printf("[%s] [%s]\n", result, str);
-#if defined(_WIN32) || defined(_WIN64) 
+#if defined(_WIN)
 		str = strtok_s(NULL, delms, &result);
 #else
 		str = strtok(NULL,delms);
 #endif
 	}
 
-#ifdef _WIN32
+#if defined(_WIN)
 	return system("pause");
 #else
 	return 0;

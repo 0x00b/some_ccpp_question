@@ -58,7 +58,7 @@ int main()
 	ret = binary_search_2(arr, 0, 8, 6); 
 	printf("binary_search_2:%d\n", ret);
 
-#ifdef _WIN32
+#if defined(_WIN)
 	return system("pause");
 #else
 	return 0;

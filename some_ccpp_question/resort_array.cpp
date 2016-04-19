@@ -178,7 +178,7 @@ int main()
 	change(str);
 	printf("调整后：%s\n",str);
 
-#ifdef _WIN32
+#if defined(_WIN)
 	return system("pause");
 #else
 	return 0;

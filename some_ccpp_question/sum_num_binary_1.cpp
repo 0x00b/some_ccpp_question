@@ -20,7 +20,7 @@ int main()
 	printf("%d的二进制中有%d个1\n", n, ret);
 
 
-#ifdef _WIN32
+#if defined(_WIN)
 	return system("pause");
 #else
 	return 0;

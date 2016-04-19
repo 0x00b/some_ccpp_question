@@ -54,7 +54,7 @@ FILE *fp;
 #define GITOX00b_2	// github 0x00b
 
 int main() {
-#if defined(_WIN32)||defined(_WIN64)
+#if defined(_WIN)
 	int err = fopen_s(&fp, "MathPic.ppm", "wb");
 #else
 	fp = fopen("MathPic.ppm", "wb");

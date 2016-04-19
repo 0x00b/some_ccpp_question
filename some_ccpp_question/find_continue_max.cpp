@@ -33,7 +33,7 @@ int main()
 	ret = MaxSum2(arr, 12);
 	printf("连续的区间最大和：%d\n",ret);
 
-#ifdef _WIN32
+#if defined(_WIN)
 	return system("pause");
 #else
 	return 0;

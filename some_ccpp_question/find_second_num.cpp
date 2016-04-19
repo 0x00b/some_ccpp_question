@@ -52,7 +52,7 @@ int main()
 	printf("the second num %d , pos is:%d\n", arr[ret], ret);
 
 
-#if defined(_WIN32)||defined(_WIN64)
+#if defined(_WIN)
 	return system("pause");
 #else
 	return 0;
