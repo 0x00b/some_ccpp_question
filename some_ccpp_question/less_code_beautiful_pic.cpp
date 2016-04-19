@@ -29,9 +29,12 @@ note：windows可以使用xnview工具打开.ppm图片
 #define _cb(x) abs((x)*(x)*(x)) // absolute value of cube
 #define _cr(x) (unsigned char)(pow((x),1.0/3.0)) // cube root
 
+/*rewrite follow 3 function*/
 unsigned char GR(int, int);
 unsigned char BL(int, int);
 unsigned char RD(int i, int j);
+
+
 void pixel_write(int, int);
 
 
@@ -51,7 +54,8 @@ FILE *fp;
 #define ERIC_1		// Eric Tressler
 
 //#define GITOX00b_1	// github 0x00b
-#define GITOX00b_2	// github 0x00b
+#define GITOX00b_2	// github 0x00b 其实2 和 3只需要改一下sin()里面的内容就会有很不一样的效果
+#define GITOX00b_3	// github 0x00b
 
 int main() {
 #if defined(_WIN)
@@ -244,12 +248,12 @@ unsigned char BL(int i, int j)
 unsigned char RD(int i, int j)
 {
 	float n, x, y, k;
-	for (k = 0; k <= L*2; k += .1)
+	for (k = 0; k < L*1.6; k += .05)
 	{
 		n = TS(k, L);
 		x = n * cos(k) + D;
 		y = n * sin(k) + D;
-		if (fabs(i - x)<2 && fabs(j - y)<2)
+		if (fabs((i - x)*(j - y))<3)
 		{
 			R  N ^ (GR(i, j) | BL(i, j));
 		}
@@ -262,19 +266,32 @@ unsigned char RD(int i, int j)
 
 unsigned char RD(int i, int j)
 {
-//	return (GR(i, j) | BL(i, j));
 	return 255 & GR(i, j) ^ BL(i, j);
 }
 unsigned char GR(int i, int j)
 {
-//	return sin((i / (double)DIM) * (i&j) / i) * 255;
-//	return sin(((j) / (double)DIM) ) * 255;
+	//	return sin(((j) / (double)DIM) ) * 255;
 	return j<i ? sin(((i) / (double)DIM)) * 255 : sin(((j) / (double)DIM)) * 255;
 }
 unsigned char BL(int i, int j)
 {
-//	return sin((i / (double)DIM) * (i&j) / i) * 255;
-	return sin(((j+i) / (double)DIM)) * 255;
+	return sin(((j + i) / (double)DIM)) * 255;
+}
+#endif
+#ifndef GITOX00b_3
+
+unsigned char RD(int i, int j)
+{
+	//return 255^(GR(i, j) & BL(i, j));
+	return 255 & (GR(i, j) | BL(i, j));
+}
+unsigned char GR(int i, int j)
+{
+	return sin( (i^j)/(double)DIM ) * 255;
+}
+unsigned char BL(int i, int j)
+{
+	return sin(i&j) * 255;
 }
 #endif
 
