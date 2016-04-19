@@ -2,14 +2,6 @@
 C or C++ ,some question.一些关于c，c++的问题。算法
 
 
-                main.h
-             
-  some_ccpp_question.vcxproj
-             some_ccpp_question.vcxproj.filters
-            
-               
-                 
-       
 
 # 目前收录
 1、二分查找 ：./some_ccpp_question/binary_search.cpp </br>
