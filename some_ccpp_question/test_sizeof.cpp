@@ -32,6 +32,11 @@ public:
 	enum {r,b,g}color;
 };
 typedef void(*func)(void);
+
+int test()
+{
+	return printf("test\n");
+}
 int main()
 {
 	int ret = sizeof(C);
@@ -41,6 +46,9 @@ int main()
 	printf("size class TEST:%d\n", ret);
 
 	printf(" %d %d  %d\n", sizeof(func), sizeof(int*), sizeof(C));
+
+	printf(" %d\n", sizeof(test()));//test not run
+
 	C* c = new C();
 
 	func f;
