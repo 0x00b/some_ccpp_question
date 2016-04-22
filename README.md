@@ -19,3 +19,5 @@ C or C++ ,some question.一些关于c，c++的问题。算法
 
 # 增加
 13、将一个数分解成几个连续的数，如 15 = 7 + 8 = 4 + 5 + 6 = 1 + 2 + 3+ 4 + 5：./some_ccpp_question/decompos_into_successive_num.cpp
+#2016-04-21
+14、./some_ccpp_question/find_second_num.cpp 中加入找到第K大的数。
