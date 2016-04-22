@@ -49,7 +49,7 @@ int FindKthNum_1(int a[], int n, int k)
 	quiksort(arr, n);
 	for (pos = 0; pos < n; pos++)
 	{
-		if (a[pos] == arr[n- k ])
+		if (a[pos] == arr[n - k])
 		{
 			break;
 		}
@@ -80,11 +80,13 @@ int FindKthNum_2(int a[], int n, int k)
 	int pos = -1;
 	int* arr = (int*)malloc(n * sizeof(int));
 	memcpy(arr, a, n*sizeof(int));
+	//找到第k大的数
 	int num = FKN_quiksort(arr, 0, n - 1, k);
 	if (num == -1)
 	{
 		return -1;
 	}
+	//找到第k大的数的位置
 	for (int i = 0; i < n; i++)
 	{
 		if (a[i] == num)
@@ -96,7 +98,18 @@ int FindKthNum_2(int a[], int n, int k)
 	free(arr);
 	return pos;
 }
-#include <math.h>
+
+/*
+	还有什么办法能不需要O(N)空间呢？
+*/
+int FindKthNum_3(int a[], int n, int k)
+{
+	//add code
+
+	return -1;
+}
+
+
 int main()
 {
 	int arr[20];
@@ -111,7 +124,7 @@ int main()
 	}
 
 	ret = FindSecondNum(arr, n);
-	if (-1 == ret )
+	if (-1 == ret)
 	{
 		printf("nothing to find\n");
 		return 0;
@@ -121,11 +134,11 @@ int main()
 	scanf("%d", &k);
 	printf("FindKthNum_1:");
 	int pos = FindKthNum_1(arr, n, k);
-	printf("%dth pos = %d\n", k, pos);
+	printf("%dth = %d pos = %d\n", k, arr[pos], pos);
 
 	printf("FindKthNum_2:");
 	pos = FindKthNum_2(arr, n, k);
-	printf("%dth pos = %d\n", k, pos);
+	printf("%dth = %d pos = %d\n", k, arr[pos], pos);
 
 #if defined(_WIN)
 	return system("pause");
@@ -142,7 +155,7 @@ void quiksort(int a[], int n)
 	{
 		while (i < j)//一趟排序，确定枢轴，这里是a[0]的位置，他左边小于等于他，右边大于等于他。对于相等的不优化
 		{
-			while (i<j && a[j] >= temp)//右边找小的数，相等不管
+			while (i < j && a[j] >= temp)//右边找小的数，相等不管
 			{
 				j--;
 			}
@@ -165,36 +178,33 @@ int FKN_quiksort(int a[], int str, int end, int k)
 	int temp = a[str];
 	int i = str, j = end;
 
-	if (end > str)
+	while (i < j)
 	{
-		while (i < j)
+		while (i < j && a[j] <= temp)
 		{
-			while (i < j && a[j] <= temp)
-			{
-				j--;
-			}
-			a[i] = a[j];
-			while (i < j && a[i] >= temp)
-			{
-				i++;
-			}
-			a[j] = a[i];
+			j--;
 		}
-		a[i] = temp;
-		if (i == (k - 1))//找到了
+		a[i] = a[j];
+		while (i < j && a[i] >= temp)
 		{
-			return a[i];
+			i++;
+		}
+		a[j] = a[i];
+	}
+	a[i] = temp;
+	if (i == (k - 1))//找到了,找到之前如果有排序过程，位置可能改变，所以能找到这个数，但是不能找到原来位置
+	{
+		return a[i];
+	}
+	else
+	{
+		if (k < i)//确定是寻找左边区间还是右边区间
+		{
+			return FKN_quiksort(a, 0, i - 1, k);
 		}
 		else
 		{
-			if (k < i)//确定是寻找左边区间还是右边区间
-			{
-				return FKN_quiksort(a, 0, i - 1, k);
-			}
-			else
-			{
-				return FKN_quiksort(a, i + 1, end, k);
-			}
+			return FKN_quiksort(a, i + 1, end, k);
 		}
 	}
 	return -1;
