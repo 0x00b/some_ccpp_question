@@ -59,5 +59,8 @@
     <ClCompile Include="decompos_into_successive_num.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="find_z_eq_x+y.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

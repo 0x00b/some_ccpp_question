@@ -127,6 +127,7 @@
     <ClCompile Include="find_continue_max.cpp" />
     <ClCompile Include="find_continue_num.cpp" />
     <ClCompile Include="find_second_num.cpp" />
+    <ClCompile Include="find_z_eq_x+y.cpp" />
     <ClCompile Include="is_big_endian.cpp" />
     <ClCompile Include="less_code_beautiful_pic.cpp" />
     <ClCompile Include="resort_array.cpp" />

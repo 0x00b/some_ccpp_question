@@ -23,7 +23,7 @@ note：windows可以使用xnview工具打开.ppm图片
 
 #if _LESS_CODE_BEAUT_PIC_
 
-#define DIM 1024
+#define DIM 1080
 #define DM1 (DIM-1)
 #define _sq(x) ((x)*(x)) // square
 #define _cb(x) abs((x)*(x)*(x)) // absolute value of cube
@@ -53,10 +53,12 @@ FILE *fp;
 
 #define ERIC_1		// Eric Tressler
 
-//#define GITOX00b_1	// github 0x00b
-#define GITOX00b_2	// github 0x00b 其实2 和 3只需要改一下sin()里面的内容就会有很不一样的效果
+#define GITOX00b_1	// github 0x00b
+//#define GITOX00b_2	// github 0x00b 其实2 和 3只需要改一下sin()里面的内容就会有很不一样的效果
 #define GITOX00b_3	// github 0x00b
 
+float min = .0;
+float max = .0;
 int main() {
 #if defined(_WIN)
 	int err = fopen_s(&fp, "MathPic.ppm", "wb");
@@ -67,6 +69,7 @@ int main() {
 	for (int j = 0; j < DIM; j++)
 		for (int i = 0; i < DIM; i++)
 			pixel_write(i, j);  
+	printf("min =%f max=%f",min,max);
 	fclose(fp);
 	return 0;
 }
@@ -255,6 +258,14 @@ unsigned char RD(int i, int j)
 		y = n * sin(k) + D;
 		if (fabs((i - x)*(j - y))<3)
 		{
+			if (min>k)
+			{
+				min = k;
+			}
+			if (max<k)
+			{
+				max = k;
+			}
 			R  N ^ (GR(i, j) | BL(i, j));
 		}
 	}
