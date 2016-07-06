@@ -23,4 +23,8 @@ C or C++ ,some question.一些关于c，c++的问题。算法
 14、./some_ccpp_question/find_second_num.cpp 中加入找到第K大的数。
 
 #2016-06-15
-14、./some_ccpp_question/find_z_eq_x+y.cpp 一个数组，一个数z，在数组中找到x,y,使得x+y=z。
+15、./some_ccpp_question/find_z_eq_x+y.cpp 一个数组，一个数z，在数组中找到x,y,使得x+y=z。
+
+#2016-07-06
+16、./some_ccpp_question/numstr2numarray.cpp 将字符串转换成整型的一个数据结构（广义表）存储，例如“<123,<0X11,0x22,<0X33,0x444,<0x55,0x66>,0X77>,0x88>,<0X99,0XaA>,<0xBbbB,<0XC,0XDD>,0xEE,0XFF>>”。
+
