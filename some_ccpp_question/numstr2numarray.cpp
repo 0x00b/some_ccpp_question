@@ -1,6 +1,6 @@
 /*********************************************************************
 ** "<0XAB,0X1F,0XFF,<0X11,0X22,0X33>...>" TO int arr {0XAB,0X1F,0XFF,{0X11,0X22,0X33}...}
-** notion:  exception
+** caution:  exception
 *********************************************************************/
 
 #include "main.h"
@@ -9,14 +9,12 @@
 
 #define TAG_STR		"<"
 #define TAG_END		">"
+#define TAG_DLT_BLK	" "
 #define TAG_DLT		","
 #define TAG_HEX_1	"0X"
 #define TAG_HEX_2	"0x"
 #define TAG_HEX_L	2
 #define HEX			16
-
-#define TYPE_ARR	0
-#define TYPE_NUM	1
 
 
 struct _Node_t_ 
@@ -33,14 +31,8 @@ struct _Node_t_
 
 	~_Node_t_()
 	{
-		if (aValue != NULL)
-		{
-			delete aValue;
-		}
-		if (next != NULL)
-		{
-			delete next;
-		}
+		delete aValue;
+		delete next;
 	}
 
 };
@@ -48,6 +40,13 @@ struct _Node_t_
 class  _NumArray_t_
 {
 public:
+
+	enum TYPE
+	{
+		TYPE_ARR = 0,
+		TYPE_NUM
+	};
+
 	_NumArray_t_()
 	{
 		m_pArr = new _Node_t_();
@@ -58,19 +57,20 @@ public:
 		//clear(m_pArr);
 		delete m_pArr;
 	}
-	void parse(char* str)
+	void parse(char* str, char* dltTag = TAG_DLT, char* endTag = TAG_END)
 	{
-		parseOne(m_pArr,&str);
+		if (NULL == str)
+		{
+			return;
+		}
+		parseOne(m_pArr, &str, endTag, dltTag);
 	}
-	void parseOne(_Node_t_* pHead ,char** str, char* endTag = TAG_END)
+	void parseOne(_Node_t_* pHead, char** str, char* endTag, char* dltTag )
 	{
 		char* lineEnd = *str;
 		_Node_t_* pTmp = NULL;
 		_Node_t_* pArr = pHead;
-		if (NULL == *str)
-		{
-			return;
-		}
+
 		if (0 != strncmp(*str, TAG_STR, strlen(TAG_STR)) 
 			&& 0 != strncmp(*str + strlen(*str) - strlen(endTag), endTag, strlen(endTag)))
 		{
@@ -80,7 +80,7 @@ public:
 
 		while ( NULL!= *str&& NULL != lineEnd &&  0 != strncmp(*str, endTag, strlen(endTag)) )
 		{
-			lineEnd = strstr(*str, TAG_DLT);
+			lineEnd = strstr(*str, dltTag);
 			if (NULL == lineEnd)
 			{
 				lineEnd = strstr(*str, endTag);
@@ -91,15 +91,15 @@ public:
 				if (0 != strncmp(*str, TAG_STR, strlen(TAG_STR)))
 				{
 					pTmp->type = TYPE_NUM;
-					pTmp->nValue = str2int(*str);
+					pTmp->nValue = str2int(*str, dltTag);
 
-					*str = lineEnd + strlen(TAG_DLT);
+					*str = lineEnd + strlen(dltTag);
 				}
 				else
 				{  
 					pTmp->type = TYPE_ARR;
 					pTmp->aValue = new _Node_t_();
-					parseOne(pTmp->aValue , str, endTag);
+					parseOne(pTmp->aValue, str, endTag ,dltTag);
 				}
 
 				pArr->next = pTmp;
@@ -197,13 +197,16 @@ private:
 
 int main()
 {
-	char* str = "<123,<0X11,0x22,<0X33,0x444,<0x55,0x66>,0X77>,0x88>,<0X99,0XaA>,<0xBbbB,<0XC,0XDD>,0xEE,0XFF>>";
+	//char* str = "<123,<0X11,0x22,<0X33,0x444,<0x55,0x66>,0X77>,0x88>,<0X99,0XaA>,<0xBbbB,<0XC,0XDD>,0xEE,0XFF>>";
+	char* str = "<123 <0X11 0x22 <0X33 0x444 <0x55 0x66> 0X77> 0x88> <0X99 0XaA> <0xBbbB <0XC 0XDD> 0xEE 0XFF>>";
+	//char* str = "<123 0X11 0x22 0X33 0x444 0x55 0x66 0X77 0x88 0X99 0XaA 0xBbbB 0XC 0XDD 0xEE 0XFF>";
 
 	//char* str = "<0XAB,0X1F,0XFf4F,0X1331,0X22,0X3333>";
 
 	_NumArray_t_* pNa = new _NumArray_t_();
 
-	pNa->parse(str);
+	//pNa->parse(str);
+	pNa->parse(str, TAG_DLT_BLK);
 
 	pNa->dsp();
 

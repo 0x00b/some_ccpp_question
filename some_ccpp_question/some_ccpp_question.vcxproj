@@ -124,12 +124,17 @@
     <ClCompile Include="binary_search.cpp" />
     <ClCompile Include="cycle_cross_link.cpp" />
     <ClCompile Include="decompos_into_successive_num.cpp" />
+    <ClCompile Include="eight_queen.cpp" />
+    <ClCompile Include="exchange_A_B_pos.cpp" />
     <ClCompile Include="find_continue_max.cpp" />
     <ClCompile Include="find_continue_num.cpp" />
     <ClCompile Include="find_second_num.cpp" />
     <ClCompile Include="find_z_eq_x+y.cpp" />
+    <ClCompile Include="horse.cpp" />
     <ClCompile Include="is_big_endian.cpp" />
+    <ClCompile Include="Joseph.cpp" />
     <ClCompile Include="less_code_beautiful_pic.cpp" />
+    <ClCompile Include="numstr2numarray.cpp" />
     <ClCompile Include="resort_array.cpp" />
     <ClCompile Include="sum_num_binary_1.cpp" />
     <ClCompile Include="test_explicit.cpp" />

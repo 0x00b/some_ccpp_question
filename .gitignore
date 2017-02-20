@@ -213,3 +213,4 @@ ModelManifest.xml
 
 #backfile
 *.bak
+/some_ccpp_question.VC.VC.opendb

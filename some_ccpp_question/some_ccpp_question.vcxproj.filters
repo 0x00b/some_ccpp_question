@@ -20,9 +20,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="binary_search.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="cycle_cross_link.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -60,6 +57,24 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="find_z_eq_x+y.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="numstr2numarray.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="exchange_A_B_pos.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Joseph.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="eight_queen.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="horse.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="binary_search.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

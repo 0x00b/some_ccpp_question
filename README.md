@@ -28,3 +28,8 @@ C or C++ ,some question.一些关于c，c++的问题。算法
 #2016-07-06
 16、./some_ccpp_question/numstr2numarray.cpp 将字符串转换成整型的一个数据结构（广义表）存储，例如“<123,<0X11,0x22,<0X33,0x444,<0x55,0x66>,0X77>,0x88>,<0X99,0XaA>,<0xBbbB,<0XC,0XDD>,0xEE,0XFF>>”。
 
+
+#2017-02-20
+17、./some_ccpp_question/eight_queen.cpp 八皇后问题
+18、./some_ccpp_question/joseph.cpp 约瑟夫环
+19、./some_ccpp_question/horse.cpp 马在棋盘上走，走满棋盘的解 

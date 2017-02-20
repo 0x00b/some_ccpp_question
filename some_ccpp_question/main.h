@@ -30,6 +30,11 @@
 #define _TEST_SIZEOF_				CLOSE
 #define _FIND_SECOND_NUM_			CLOSE
 #define _DECOMPOSE_SUCCESSIVE_NUM_	CLOSE
-#define _FIND_X_IN_ARR_				1
+#define _FIND_X_IN_ARR_				CLOSE
+#define _NUMSTR_TO_NUMARRAY_		CLOSE
+#define _EXCHANGE_A_B_POS_			CLOSE
+#define _JOSEPH_					CLOSE	
+#define _EIGHT_QUEEN_				CLOSE
+#define _HORSE_						1
 
 #endif //_MAIN_H_
