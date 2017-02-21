@@ -151,16 +151,71 @@ int eight_queen_1()
 /*解法二：
 * 回溯法
 */
-int eight_queen_2()
+
+/* queens[i] 表示第i颗棋子的列坐标 */
+int queens[EDGE];
+/*
+* queens[0]=1  1 0 0 0 0 0 0 0 
+* queens[1]=3  0 0 3 0 0 0 0 0
+* queens[2]=5  0 0 0 0 5 0 0 0
+*  .....
+* queens[7]=8  0 0 0 0 0 0 0 8
+*/
+
+void init_queens()
 {
-	int sum = 0;
-	return sum;
+	for (int i = 0; i < EDGE; i++)
+	{
+		queens[i] = 0;
+	}
+}
+
+/*index: 表示第index颗棋子
+* col  : 表示第index颗棋子在这一行的第几列
+*/
+int check(int index, int col) 
+{
+	for (int i = 0; i < index; i++)
+	{
+		if (queens[i] == col   /* 同一列 */
+			|| queens[i] == col - (index - i)   /* \方向  */
+			|| queens[i] == col + (index - i)   /* /方向  */)
+		{
+			return 0;
+		}
+	}
+	return 1;
+}
+
+int sum = 0;
+
+void eight_queen_2(int index)
+{
+	for (int i = 0; i < EDGE; i++)
+	{
+		if (check(index, i + 1))
+		{
+			queens[index] = i + 1;
+			if (index == EDGE - 1)
+			{/* 最后一颗棋子 */
+				sum++;
+				return;
+			}
+			eight_queen_2(index + 1);
+			queens[index] = 0;
+		}
+	}
 }
 
 int main()
 {
 
-	printf("八皇后问题共有%d种解",eight_queen_1());
+	//printf("八皇后问题共有%d种解",eight_queen_1());
+	
+	init_queens();
+	eight_queen_2(0);
+
+	printf("八皇后问题共有%d种解", sum);
 
 #if defined(_WIN)
 	return system("pause");
