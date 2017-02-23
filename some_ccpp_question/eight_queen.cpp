@@ -169,6 +169,14 @@ void init_queens()
 		queens[i] = 0;
 	}
 }
+void print_queens()
+{
+	for (int i = 0; i < EDGE; i++)
+	{
+		printf("%d ",queens[i]);
+	}
+	printf("\n");
+}
 
 /*index: 表示第index颗棋子
 * col  : 表示第index颗棋子在这一行的第几列
@@ -198,7 +206,8 @@ void eight_queen_2(int index)
 			queens[index] = i + 1;
 			if (index == EDGE - 1)
 			{/* 最后一颗棋子 */
-				sum++;
+				sum++; 
+				print_queens();
 				return;
 			}
 			eight_queen_2(index + 1);

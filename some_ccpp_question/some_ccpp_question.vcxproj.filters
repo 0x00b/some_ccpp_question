@@ -77,5 +77,14 @@
     <ClCompile Include="binary_search.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="palindrome.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="max_same_substr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="bintree_pre_mid_to_after.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

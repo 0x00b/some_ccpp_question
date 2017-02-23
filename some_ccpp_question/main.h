@@ -34,7 +34,10 @@
 #define _NUMSTR_TO_NUMARRAY_		CLOSE
 #define _EXCHANGE_A_B_POS_			CLOSE
 #define _JOSEPH_					CLOSE	
-#define _EIGHT_QUEEN_				1
+#define _EIGHT_QUEEN_				CLOSE
 #define _HORSE_						CLOSE
+#define _PALINDROME_				CLOSE
+#define _MAX_SAME_SUBSTR_			CLOSE
+#define _PREMIDTOAFTER_				1
 
 #endif //_MAIN_H_
