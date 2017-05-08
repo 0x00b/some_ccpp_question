@@ -86,5 +86,11 @@
     <ClCompile Include="bintree_pre_mid_to_after.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="hugenum_operaton.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="wintraverfile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

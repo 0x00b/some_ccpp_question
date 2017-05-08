@@ -24,7 +24,7 @@
 #define _FIND_CON_NUM_				CLOSE
 #define _LESS_CODE_BEAUT_PIC_		CLOSE
 #define _TEST_EXPLICIT_				CLOSE
-#define _TEST_STRTOK_				CLOSE
+#define _TEST_STRTOK_				1
 #define _SUM_NUM_BIN_1_				CLOSE
 #define _SECOND_NUM_				CLOSE
 #define _TEST_SIZEOF_				CLOSE
@@ -38,6 +38,7 @@
 #define _HORSE_						CLOSE
 #define _PALINDROME_				CLOSE
 #define _MAX_SAME_SUBSTR_			CLOSE
-#define _PREMIDTOAFTER_				1
+#define _PREMIDTOAFTER_				CLOSE
+#define _HUGENUM_OPERATION_			CLOSE
 
 #endif //_MAIN_H_

@@ -28,6 +28,16 @@ void horse(int step, int row, int col)
 	flag[row][col] = 1;/* 标记当前位置为已走过*/
 	steps[step] = chessboard[row][col];/* 记录路径*/
 
+	if (step == 25)/* 走了25步说明走完棋盘了 */
+	{
+		sum++;
+		for (int i = 1; i < 26; i++)
+		{
+			printf("[%d,%d]->",i,steps[i]);
+		}
+		printf("\n");
+	}
+
 	/* 寻找下一个位置*/
 	for (int i = 0; i < 8; i++)
 	{
@@ -43,15 +53,6 @@ void horse(int step, int row, int col)
 				flag[nx][ny] = 0;
 			}
 		}
-	}
-	if (step == 25)/* 走了25步说明走完棋盘了 */
-	{
-		sum++;
-		for (int i = 1; i < 26; i++)
-		{
-			printf("[%d,%d]->",i,steps[i]);
-		}
-		printf("\n");
 	}
 }
 

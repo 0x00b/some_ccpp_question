@@ -11,7 +11,7 @@ int isBigEndian()
 
 int main()
 {
-	printf("操作系统是:%s\n", isBigEndian() ? "大端" : "小端");
+	printf("system is :%s\n", isBigEndian() ? "big endian" : "litter endian");
 
 #if defined(_WIN)
 	return system("pause");
