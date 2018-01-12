@@ -92,5 +92,11 @@
     <ClCompile Include="wintraverfile.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="find_two_part_max.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="find_max_square.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
