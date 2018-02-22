@@ -89,14 +89,19 @@
     <ClCompile Include="hugenum_operaton.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="wintraverfile.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="find_two_part_max.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="find_max_square.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="virtual_inheritance.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Filter>源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -33,3 +33,12 @@ C or C++ ,some question.一些关于c，c++的问题。算法
 17、./some_ccpp_question/eight_queen.cpp 八皇后问题
 18、./some_ccpp_question/joseph.cpp 约瑟夫环
 19、./some_ccpp_question/horse.cpp 马在棋盘上走，走满棋盘的解 
+
+#2018-02-22
+20、./some_ccpp_question/bintree_pre_mid_to_after.cpp 二叉树前中序得到后序
+21、./some_ccpp_question/max_same_substr.cpp 最大相同子串
+22、./some_ccpp_question/palindrome.cpp 100到1000之间的水仙花数
+23、./some_ccpp_question/hugenum_operaton.cpp 大数操作
+24、./some_ccpp_question/find_max_square.cpp 找到一个棋盘中的最大空白方形面积
+25、./some_ccpp_question/find_two_part_max.cpp  一个数组中，找到两个不相邻连续区间区间中的最大和
+26、./some_ccpp_question/virtual_inheritance.cpp  C++继承与虚表

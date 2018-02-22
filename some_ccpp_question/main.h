@@ -41,7 +41,8 @@
 #define _PREMIDTOAFTER_				CLOSE
 #define _HUGENUM_OPERATION_			CLOSE
 #define _TWO_PART_MAX_				CLOSE
-#define _FIND_MAX_SQUARE_				1
+#define _FIND_MAX_SQUARE_			CLOSE
+#define _VIRTUAL_INHERITANCE_		1
 
 
 #endif //_MAIN_H_
