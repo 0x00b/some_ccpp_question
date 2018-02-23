@@ -39,3 +39,4 @@ C or C++ ,some question.一些关于c，c++的问题。算法
 24、./some_ccpp_question/find_max_square.cpp 找到一个棋盘中的最大空白方形面积</br>
 25、./some_ccpp_question/find_two_part_max.cpp  一个数组中，找到两个不相邻连续区间区间中的最大和</br>
 26、./some_ccpp_question/virtual_inheritance.cpp  C++继承与虚表</br>
+27、./some_ccpp_question/test_new.cpp  C++一些关于new的东西</br>
