@@ -16,22 +16,22 @@ C or C++ ,some question.一些关于c，c++的问题。算法
 12、 strtok：./some_ccpp_question/test_strtok.cpp</br>
 
 13、将一个数分解成几个连续的数，如 15 = 7 + 8 = 4 + 5 + 6 = 1 + 2 + 3+ 4 + 5：./some_ccpp_question/decompos_into_successive_num.cpp
-#2016-04-21
+#2016-04-21</br>
 14、./some_ccpp_question/find_second_num.cpp 中加入找到第K大的数。</br>
 
-#2016-06-15
+#2016-06-15</br>
 15、./some_ccpp_question/find_z_eq_x+y.cpp 一个数组，一个数z，在数组中找到x,y,使得x+y=z。</br>
 
-#2016-07-06
+#2016-07-06</br>
 16、./some_ccpp_question/numstr2numarray.cpp 将字符串转换成整型的一个数据结构（广义表）存储，例如“<123,<0X11,0x22,<0X33,0x444,</br><0x55,0x66>,0X77>,0x88>,<0X99,0XaA>,<0xBbbB,<0XC,0XDD>,0xEE,0XFF>>”。</br>
 
 
-#2017-02-20
+#2017-02-20</br>
 17、./some_ccpp_question/eight_queen.cpp 八皇后问题</br>
 18、./some_ccpp_question/joseph.cpp 约瑟夫环</br>
 19、./some_ccpp_question/horse.cpp 马在棋盘上走，走满棋盘的解 </br>
 
-#2018-02-22
+#2018-02-22</br>
 20、./some_ccpp_question/bintree_pre_mid_to_after.cpp 二叉树前中序得到后序</br>
 21、./some_ccpp_question/max_same_substr.cpp 最大相同子串</br>
 22、./some_ccpp_question/palindrome.cpp 100到1000之间的水仙花数</br>
