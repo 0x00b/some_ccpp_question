@@ -98,6 +98,12 @@
     <ClCompile Include="virtual_inheritance.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test_new.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test_fork.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md">

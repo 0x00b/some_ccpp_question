@@ -145,6 +145,8 @@
     <ClCompile Include="resort_array.cpp" />
     <ClCompile Include="sum_num_binary_1.cpp" />
     <ClCompile Include="test_explicit.cpp" />
+    <ClCompile Include="test_fork.cpp" />
+    <ClCompile Include="test_new.cpp" />
     <ClCompile Include="test_sizeof.cpp" />
     <ClCompile Include="test_strtok.cpp" />
     <ClCompile Include="virtual_inheritance.cpp" />
